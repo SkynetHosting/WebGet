@@ -8,7 +8,7 @@ and formatted JSON of information like release date, developer, publisher, and t
 Dependencies
 
   - FuzzyWuzzy
-	    - You can use python-levenshtien for even better performance (not working on Windows)
+	- You can use python-levenshtien for even better performance (not working on Windows)
   - Requests
   - BeautifulSoup
   - urllib3
