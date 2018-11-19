@@ -5,6 +5,7 @@ import sys
 import time
 from crawler import getData
 from fuzzywuzzy import fuzz
+from tqdm import tqdm
 
 # Downloads from the given url if the given file is null or out of date
 def download_if_outdated(url, path, name, lifespan):
@@ -40,7 +41,7 @@ def array_from_json_file(path, array_location):
 # Returns a list of tuples (int, data) with match strength
 def fuzzy_query(query, data, str_location):
 	results = []
-	for i in range(0, len(data)):
+	for i in tqdm(range(0, len(data))):
 		target = enumerate_json(data[i], str_location)
 		if (len(target) > 1):
 			strength = fuzz.partial_ratio(query.lower(), target.lower())
