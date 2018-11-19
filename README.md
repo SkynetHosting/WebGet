@@ -12,3 +12,4 @@ Dependencies
   - Requests
   - BeautifulSoup
   - urllib3
+  - TQDM
